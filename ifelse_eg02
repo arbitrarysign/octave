@@ -1,0 +1,25 @@
+% GNU Octave tutorials by arbitrarysign
+% if you're running MatLab you may see syntax errors
+% 
+% if/elseif/else/end example
+%
+% LOGIC
+%	if(expression),
+%		do something;
+%	elseif(expression,
+%		do somethingelse;
+%	else
+%		otherwise dothis;
+%	end
+%	
+%	 in this example the values are hard-coded in, there is no user input
+
+
+    total_cost = 499
+    is_member = false;
+    
+    if is_member == true
+        total_cost = total_cost * 0.9
+    end
+    
+    fprintf("Amount to pay is $%.2f\n", total_cost);
