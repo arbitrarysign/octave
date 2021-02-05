@@ -1,0 +1,17 @@
+% GNU Octave tutorials by mayann
+% if you're running MatLab you may see syntax errors
+% 
+% for loop example
+% you can loop this any number of times
+% you can loop over aany vector - see LENGTH function
+%
+% LOGIC
+%	for i=1:7,
+%		do something;
+%	end
+
+
+    for i=1:7,    % for iterating 1 to 10 loops
+                  % this is hard-coded in for now; what you want is user input
+      disp(sprintf("%ith index", i));   %string print
+    end;
