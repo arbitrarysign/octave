@@ -1,0 +1,25 @@
+% GNU Octave tutorials by mayann
+% if you're running MatLab you may see syntax errors
+% 
+% if/elseif/else/end example
+%
+% LOGIC
+%	if(expression),
+%		do something;
+%	elseif(expression,
+%		do somethingelse;
+%	else
+%		otherwise dothis;
+%	end
+
+   x = 6   % this 6 is hard-coded in, so when you run it, it just calculates it for you
+           % what you'll want is to change this to a user input
+           
+    if x > 10,
+        disp("X is bigger than 10!");
+    elseif x>0,
+        disp("X is greater than 0 but less than 10!");
+    else
+        disp("x is a negative!");
+    end;
+  
