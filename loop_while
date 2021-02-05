@@ -1,0 +1,20 @@
+% GNU Octave tutorials by mayann
+% if you're running MatLab you may see syntax errors
+% 
+% while loop example
+% different from the loop_basic example as you can use this for unknown no of loops
+%
+% LOGIC
+%	    while(expression),
+%		  do something;
+%	end
+% 
+% will repeat until the expression is false - if not it may loop infinitely
+% if you get stuck in a nevernding loop, Octave stop is CTRL+C
+
+
+    i = 1
+    while i < 9,   % upper limit
+     disp(i);
+     i=i+1;       % print will stop at 9 since 9 + 1 is not less than 9
+    end
