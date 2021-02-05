@@ -1,0 +1,16 @@
+
+
+    vehicle_cost = 20000;
+    
+    car_type = "petrol";
+    
+    
+    if strcmp(car_type, "petrol") == true
+      vehicle_cost = vehicle_cost * 2
+      
+    else
+      vehicle_cost = vehicle_cost * 1.5
+      
+    end
+    
+    fprintf("Cost of your car is $%.2f \n", vehicle_cost);
