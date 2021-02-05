@@ -1,0 +1,7 @@
+  values = input("enter value(s) ");
+  
+  converted_values = values * 30;
+  
+    for index=1:length(values)
+      fprintf("%.2f feet = %.2f cm\n", values(index), converted_values(index));
+    end
