@@ -1,0 +1,22 @@
+% GNU Octave tutorials by mayann
+% if you're running MatLab you may see syntax errors
+% 
+% break example
+% used to break the loop and stop it from continuing 
+% 
+% 
+% NOTE the below code is meant to run in the command window
+% type last v in and it will display
+
+    n = 1;
+    v = 1;
+
+    while true,
+          v = v + n;
+              if n > 10
+              break;   % breaks the loop once n > 10
+              end;
+          n = n+1;
+    end;
+    
+v
