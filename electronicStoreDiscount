@@ -1,0 +1,71 @@
+% question 6 on electronic store discounts
+
+clear;
+clc;
+
+purchase_continue = "y";   % initialisation
+
+  while purchase_continue == "y"    
+
+          name = input("\nEnter name: ", "s");
+          address = input("Enter address: ", "s");
+          purchase_amt_gross = input("Enter amount of purchase: ");
+          purchase_type = input("Enter type of purchase (L for Laptop/D for Desktop): ", "s");   
+          
+          purchase_discount_percent = 0;   % initialisation
+          
+                    if strcmpi(purchase_type, "L")     % LAPTOP CALCULATIONS 
+                       
+                       if purchase_amt_gross >=0 && purchase_amt_gross<=250
+                          purchase_discount_percent = 0;   % 0% discount
+                       
+                       elseif purchase_amt_gross >=250 && purchase_amt_gross<=570
+                          purchase_discount_percent = 5;   % 5% discount
+
+                       elseif purchase_amt_gross >=570 && purchase_amt_gross<=1000
+                          purchase_discount_percent = 7.5; % 7.5% discount                            
+
+                       elseif purchase_amt_gross > 1000
+                          purchase_discount_percent = 10;  % 10% discount  
+                       
+                       end
+                    
+                      purchase_amt_net = purchase_amt_gross *(purchase_discount_percent/100);  % 0% discount
+                      
+                      fprintf("\nName: %s\n", name);
+                      fprintf("Address: %s\n", address);
+                      fprintf("Net amount: %.2f\n", purchase_amt_net); 
+                      
+
+                       
+                    elseif strcmpi(purchase_type, "D")   % DESKTOP CALCULATIONS
+                       if purchase_amt_gross >=0 && purchase_amt_gross<=250
+                          purchase_discount_percent = 5;   % 5% discount
+                       
+                       elseif purchase_amt_gross >=250 && purchase_amt_gross<=570
+                          purchase_discount_percent = 7.6;  % 7,6% discount 
+
+                       elseif purchase_amt_gross >=570 && purchase_amt_gross<=1000
+                          purchase_discount_percent = 10;   % 10% discount                          
+
+                       elseif purchase_amt_gross > 1000
+                          purchase_discount_percent = 15;    % 15% discount
+                       
+                       end
+                    
+                      purchase_amt_net = purchase_amt_gross *(purchase_discount_percent/100);
+                      
+                      fprintf("\nName: %s\n", name);
+                      fprintf("Address: %s\n", address);
+                      fprintf("Net amount: %.2f\n", purchase_amt_net); 
+                      
+                 
+                    else    % PRINT ERROR FOR LAPTOP OR DESKTOP INPUT
+                      fprintf ("Invalid type of purchase.\n");
+                    end
+
+      purchase_continue = input("\nDo you wish to continue purchase: ", "s");    % keep looping inside or end  
+    
+  end
+      
+      fprintf ("\nYou have exit purchase screen. Goodbye.\n");
